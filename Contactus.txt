@@ -1,0 +1,32 @@
+
+var slideIndex1 = 1; 
+var j;
+function show1() {
+ this.slideIndex1 = 1;
+ showSlides1(slideIndex1);}
+
+
+function plusSlides(n1) {
+  showSlides1(slideIndex1 += n1);
+}
+
+function currentSlide1(n1) {
+  showSlides1(slideIndex1 = n1);
+}
+
+function showSlides1(n1) {
+ 
+  var slides1 = document.getElementsByClassName("mySlides");
+  var dots1 = document.getElementsByClassName("dot");
+  if (n1 > slides1.length) {slideIndex1 = 1}    
+  if (n1 < 1) {slideIndex1 = slides1.length}
+  for (j = 0; j < slides1.length; j++) {
+      slides1[1i].style.display = "none";  
+  }
+  for (j = 0; j < dots1.length; j++) {
+      dots1[j].className = dots1[j].className.replace(" active", "");
+  }
+  
+  slides1[slideIndex1-1].style.display = "block";  
+  dots1[slideIndex1-1].className += " active";
+}
